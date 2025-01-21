@@ -1,0 +1,493 @@
+:root{
+    --color-primary: #f1f7f8;
+    --color-alter: #74b6f9;
+    --color-white: #fff;
+    --color-info-dark: #00152e;
+    --color-info-light: #dce1eb;
+    --color-dark: #ffffff;
+    --color-light: #2d1b1b00;
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #7c8795;
+    --color-background: #212020da;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 1rem 1rem #a9cdfa32;
+    --font-size: 14px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: var(--font-size);
+}
+body{
+    width: 100vw;
+    height: auto;
+    font-family: Roboto, sans-serif;
+    font-size: var(--font-size);
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+.container{
+    display: grid;
+    width: 100%;
+    height: auto;
+    background: var(--color-background);
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 24rem;
+    padding-right: 2rem;
+   
+}
+.sidebar a{
+    color: var(--color-dark);
+}
+img{
+    display: block;
+    width: 100%;
+}
+.text_muted{
+    color: var(--color-dark-variant);
+}
+aside{
+    height: auto;
+    background: var(--color-alter);
+}
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+aside .logo{
+    display: flex;
+    gap: 1rem;
+}
+aside .logo h2{
+    padding-top: 0.5rem;
+    color: var(--color-info-dark);
+}
+aside .logo img{
+    width: 3rem;
+    height: 3rem;
+}
+aside .close i{
+    display: none;
+}
+aside .sidebar{
+    background: var(--color-alter);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    top: 3rem;
+}
+aside h3{
+    font-weight: 600;
+}
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 0.5s ease;
+}
+aside .sidebar a i{
+    transition: all 0.3s ease;
+    font-size: 1.6rem;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+/* aside .sidebar a.active{
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+} */
+/* aside .sidebar a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+} */
+/* aside .sidebar a.active i{
+    color: var(--color-primary);
+    margin-left: calc(1rem -3px);
+} */
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+aside .sidebar a:hover i{
+    margin-left: 1rem;
+}
+aside .sidebar .count{
+    background: var(--color-primary);
+    color: var(--color-info-dark);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-2);
+}
+ main{
+    margin-top: 1.4rem;
+ }
+ main .date{
+    display: inline-block;
+    background: var(--color-primary);
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+ }
+ main .date input[type="date"]{
+    background: transparent;
+    color: var(--color-info-dark);
+ }
+ main .insights{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+ }
+ main .insights > div{
+    background: var(--color-primary);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    color: var(--color-info-dark);
+    transition: all 0.3s ease;
+ }
+ main .insights > div:hover{
+    box-shadow: none;
+ }
+ main .insights > div i{
+    background: var(--color-dark-variant);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-background);
+    font-size: 2.3rem;
+ }
+ main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1.3rem;
+ }
+ main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+ }
+ main .insights svg{
+    width: 7rem;
+    height: 7rem;
+ }
+ main .insights svg circle{
+    fill: none;
+    stroke: var(--color-info-dark);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+ }
+ main .insights .customer_count svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+ } 
+ main .insights .lead_count svg circle{
+    stroke-dashoffset: 20;
+    stroke-dasharray: 80;
+ } 
+ main .insights .monthly_profit svg circle{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+ } 
+ main .insights .progress .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ main .insights small{
+    margin-top: 1.6rem;
+    display: block;
+ }
+ main .customers,
+ main .lead{
+    margin-top: 1.3rem;
+ }
+ main .customers h2,
+ main .lead h2{
+    margin-bottom: 0.8rem;
+ }
+ main .customers table,
+ main .lead table{
+    background: var(--color-primary);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    color: var(--color-info-dark);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+ }
+ main .customers table:hover,
+ main .lead table:hover{
+    box-shadow: none;
+ }
+ main table tbody td{
+    height: 2.6rem;
+    border-bottom: 1px solid var(--color-primary-variant);
+    color: var(--color-dark-variant);
+ }
+ main table tbody tr:last-child td{
+    border: none;
+ }
+main .customers a,
+main .lead a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-info-light);
+    font-weight: 700;
+}
+.right{
+    margin-top: 2.3rem;
+}
+.right .top{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+.right .top button{
+    display: none;
+}
+.right .theme_toggler{
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.8rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+.right .theme_toggler i{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right .theme_toggler i.active{
+    background: var(--color-alter);
+    color: #00152e;
+    border-radius: var(--border-radius-1);
+}
+.right .top .profile{
+    display: flex;
+    gap: 1rem;
+    text-align: right;
+}
+.no_of_deals{
+    margin-top: 3.3rem;
+    margin-right: 1.3rem;
+    background: var(--color-primary);
+    color: var(--color-info-dark);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 35%;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    padding: var(--card-padding);
+    transition: all 0.3s ease;
+}
+.no_of_deals:hover{
+    box-shadow: none;
+}
+.no_of_deals .details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+.no_of_deals .details h2{
+    padding-left: 2rem;
+    padding-bottom: 7rem;
+}
+.right .no_of_deals .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+}
+.right .no_of_deals .progress .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right .no_of_deals svg{
+    width: 7rem;
+    height: 7rem;
+}
+.right .no_of_deals svg circle{
+    fill: none;
+    stroke: var(--color-info-dark);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(10px, 5px);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+.todo_section{
+    margin-top: 3.3rem;
+    margin-right: 1.3rem;
+    background: var(--color-primary);
+    color: var(--color-info-dark);
+    border-radius: var(--card-border-radius);
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center; 
+    height: auto; 
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    padding: var(--card-padding);
+    transition: all 0.3s ease;
+}
+.todo_section:hover{
+    box-shadow: none;
+}
+.todo_section ul li {
+    font-size: 1rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    color: var(--color-info-dark);
+}
+.todo_section ul li input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-info-dark); 
+    cursor: pointer;
+}
+.review_section {
+    margin-top: 3.3rem;
+    background: var(--color-primary);
+    color: var(--color-info-dark);
+    border-radius: var(--card-border-radius);
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center; 
+    width: 100%;
+    height: auto;
+    box-shadow: var(--box-shadow);
+    padding: var(--card-padding);
+    transition: all 0.3s ease;
+}
+.review_section .details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; 
+}
+.review_section:hover{
+    box-shadow: none;
+}
+.review_section .rating span {
+    font-size: 1.8rem;
+    color: gold; 
+}
+.review_section p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--color-info-dark);
+}
+
+
+@media (max-width: 1200px){
+    .container{
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+    aside .logo h2{
+        display: none;
+    }
+    aside .sidebar h3{
+        display: none;
+    }
+    aside .sidebar a{
+        width: 5.5rem;
+    }
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    main .insights{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    main .customers{
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+    main .customers table{
+        width: 83vw;
+    }
+    main .lead{
+        height: auto;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+    main .lead table{
+        width: 83vw;
+    }
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+    }
+    main table body tr td:last-child,
+    main table body tr td:first-child{
+        display: none;
+    }
+
+}

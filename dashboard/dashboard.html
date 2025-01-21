@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/dash_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/logo.jpg" alt="">
+                    <h2 >JAMS</h2>
+                </div>
+                <div class="close" id="close_btn">
+                    <a href=""><i class="ri-close-large-line"></i></a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="" class="active"><i class="ri-dashboard-fill"></i><h3>Dashboard</h3></a>
+                <a href=""><i class="ri-booklet-fill"></i><h3>Leads</h3></a>
+                <a href=""><i class="ri-user-3-fill"></i><h3>Customer</h3></a>
+                <a href=""><i class="ri-account-box-fill"></i><h3>Accounts</h3></a>
+                <a href=""><i class="ri-shake-hands-fill"></i><h3>Deals</h3></a>
+                <a href=""><i class="ri-calendar-todo-fill"></i><h3>Activities</h3><span class="count">4</span></a>
+                <a href=""><i class="ri-todo-fill"></i><h3>Reports</h3></a>
+                <a href=""><i class="ri-feedback-fill"></i><h3>Feeds</h3></a>
+                <a href=""><i class="ri-logout-box-r-fill"></i><h3>LogOut</h3></a>
+            </div>
+        </aside>
+        <main>
+            <h1>Dashboard</h1>
+            <div class="date"><input type="date"></div>
+            <div class="insights">
+                <div class="customer_count">
+                    <i class="ri-file-check-fill"></i>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Customer Count</h3>
+                            <h1>20</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text_muted">Last 24 Hours</small>
+                </div>
+                <div class="lead_count">
+                    <i class="ri-bar-chart-box-fill"></i>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Lead Count</h3>
+                            <h1>20</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text_muted">Last 24 Hours</small>
+                </div>
+                <div class="monthly_profit">
+                    <i class="ri-discount-percent-fill"></i>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Monthly Profit</h3>
+                            <h1>20</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text_muted">Last 24 Hours</small>
+                </div>
+            </div>
+            <div class="customers">
+                <h2>Customers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Profit</th>
+                            <th>Score</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name1</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td class="rating">4.5</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>name2</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td class="rating">3.3</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>name3</td>
+                            <td>70</td>
+                            <td>70</td>
+                            <td class="rating">4.6</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="">Show All</a>
+            </div>
+            <div class="lead">
+                <h2>Lead</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lead Name</th>
+                            <th>Lead Score</th>
+                            <th>Lead Status</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name1</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td class="rating">7895626486</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>name2</td>
+                            <td>30</td>
+                            <td>70</td>
+                            <td class="rating">8954256465</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>name3</td>
+                            <td>70</td>
+                            <td>30</td>
+                            <td class="rating">7484555258</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="">Show All</a>
+            </div>
+        </main>
+        <div class="right">
+            <div class="top">
+                <button id="menu_btn">
+                    <i class="ri-menu-line"></i>
+                </button>
+                <div class="theme_toggler">
+                    <i class="ri-sun-line active"></i>
+                    <i class="ri-moon-fill"></i>
+                </div>
+                <div class="profile">
+                    <i class="ri-notification-fill"></i>
+                    <div class="info">
+                        <p>Hey, <b>Allen</b></p>
+                        <b class="text_muted">Admin</b>
+                    </div>
+                    <div class="profile_photo">
+                        <img src="" alt="profile_photo">
+                    </div>
+                </div>
+            </div>
+            <div class="no_of_deals">
+                <div class="details">
+                <h2>No of Deals</h2>
+                <p>Enables horizontal layout</p>
+                <p>Vertically aligns content</p>
+                <p>Adds spacing inside the box</p>
+                </div>
+                <div class="progress">
+                    <svg>
+                        <circle cx="38" cy="38" r="36"></circle>
+                    </svg>
+                    <div class="number">
+                        <p>81</p>
+                    </div>
+                </div>
+            </div>
+            <div class="todo_section">
+                <div class="details">
+                    <h2>To-Do List</h2>
+                    <ul>
+                        <li><input type="checkbox" /> Complete UI design</li>
+                        <li><input type="checkbox" /> Review project requirements</li>
+                        <li><input type="checkbox" /> Submit report</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="review_section">
+                <div class="details">
+                    <h2>Customer Reviews</h2>
+                    <div class="rating">
+                        <span>★★★★☆</span>
+                        <p>4.5/5</p>
+                        <p>"Excellent service and quality!"</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
