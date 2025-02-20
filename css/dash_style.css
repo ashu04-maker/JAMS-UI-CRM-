@@ -21,6 +21,14 @@
     --box-shadow: 0 1rem 1rem #a9cdfa32;
     --font-size: 14px;
 }
+.dark_theme_variables{
+    --color-background:#ccc9c9;
+    --color-white:#ffffff;
+    --color-dark:#000000;
+    --color-dark-variant:#3f3e3e;
+    --color-light:#ffffff;
+    --box-shadow: 0 1rem 1rem #a9cdfa32;
+}
 *{
     margin: 0;
     padding: 0;
@@ -87,7 +95,10 @@ aside .logo img{
     height: 3rem;
 }
 aside .close i{
-    display: none;
+    padding-right: 2rem;
+    font-weight: bolder;
+    color: #00152e;
+    font-size: larger;
 }
 aside .sidebar{
     background: var(--color-alter);
@@ -116,7 +127,7 @@ aside .sidebar a i{
 }
 aside .sidebar a:last-child{
     position: absolute;
-    bottom: 2rem;
+    top: 48rem;
     width: 100%;
 }
 /* aside .sidebar a.active{
@@ -436,11 +447,118 @@ main .lead a{
     line-height: 1.4;
     color: var(--color-info-dark);
 }
-
-
-@media (max-width: 1200px){
+@media(max-width: 768px){
+    body{
+        /* background: rgb(255, 5, 213); */
+        grid-template-columns: 1fr;
+    }
     .container{
-        width: 94%;
+        width: 100%;
+    }
+    .aside{
+        position: fixed;
+        left: -100%;
+        background:var(--color-alter);
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-info-light);
+        height: 100%;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+    }
+    .aside .logo{
+        margin-left: 1rem;
+    }
+    .aside .logo h2{
+        display: inline;
+    }
+    .aside .sidebar h3{
+        display: inline;
+    }
+    .aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+    .aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+    .aside .close a{
+        display: inline;
+        cursor: pointer;
+    }
+    main {
+        margin-top: 3rem;
+        padding: 0 1rem;
+    }
+    main .customers{
+        position: relative;
+        width: 75%;
+    }
+    main .customers table{
+        width: 100%;
+        margin: 0;
+    }
+    main .lead{
+        position: relative;
+        width: 75%;
+    }
+    main .customers table{
+        width: 100%;
+        margin: 0;
+    }
+    main .insights {
+        grid-template-columns: 1fr;
+        width: 25%;
+    }
+    .right{
+        grid-template-columns: 1fr;
+        width: 35%;
+    }
+    .right .top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rfem 1rem var(--color-info-light);
+    }
+    .right .top .theme_toggler{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+    .right .profile .info{
+        display: none;
+    }
+    .right .top .buttton{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        left: 1rem;
+    }
+    .right.top .buttton i{
+        font-size: 2rem;
+    }
+
+}
+
+/* @media (max-width: 1200px){
+    body{
+        background: red;
+    }
+    .container{
+        width: 100%;
         grid-template-columns: 7rem auto 23rem;
     }
     aside .logo h2{
@@ -458,12 +576,13 @@ main .lead a{
     }
     main .insights{
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 1;
+        width: 45%;
     }
     main .customers{
-        width: 100%;
-        position: absolute;
-        left: 50%;
+        width: 75%;
+        position: relative;
+        left: 13rem;
         transform: translateX(-50%);
         margin: 2rem 0 0 8.8rem;
     }
@@ -471,10 +590,9 @@ main .lead a{
         width: 83vw;
     }
     main .lead{
-        height: auto;
-        width: 100%;
-        position: absolute;
-        left: 50%;
+        width: 75%;
+        position: relative;
+        left: 13rem;
         transform: translateX(-50%);
         margin: 2rem 0 0 8.8rem;
     }
@@ -489,5 +607,27 @@ main .lead a{
     main table body tr td:first-child{
         display: none;
     }
+    .right {
+        grid-template-columns: 1fr;
+        gap: 1;
+        width: 25%;
+    }
+    .right .top{
+        width: 0.5px;
+    }
+    .right .no_of_deals{
+        width: 25%;
+        right: 1px;
+        position: static;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+    .right .todo_section{
+        width: 25%;
+        right: 5rem;
+        position: static;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
 
-}
+} */
