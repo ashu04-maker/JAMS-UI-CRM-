@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="container">
+        <button id="menu_btn"><i class="ri-menu-line"></i></button>
         <aside>
             <div class="top">
                 <div class="logo">
@@ -24,8 +25,8 @@
             </div>
             <div class="sidebar">
                 <a href="" class="active"><i class="ri-dashboard-fill"></i><h3>Dashboard</h3></a>
-                <a href=""><i class="ri-booklet-fill"></i><h3>Leads</h3></a>
                 <a href=""><i class="ri-user-3-fill"></i><h3>Customer</h3></a>
+                <a href=""><i class="ri-booklet-fill"></i><h3>Leads</h3></a>
                 <a href=""><i class="ri-account-box-fill"></i><h3>Accounts</h3></a>
                 <a href=""><i class="ri-shake-hands-fill"></i><h3>Deals</h3></a>
                 <a href=""><i class="ri-calendar-todo-fill"></i><h3>Activities</h3><span class="count">4</span></a>
@@ -34,6 +35,7 @@
                 <a href=""><i class="ri-logout-box-r-fill"></i><h3>LogOut</h3></a>
             </div>
         </aside>
+        <div class="content_container">
         <main>
             <h1>Dashboard</h1>
             <div class="date"><input type="date"></div>
@@ -105,7 +107,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr>
+                        <tr>
                             <td>name1</td>
                             <td>50</td>
                             <td>50</td>
@@ -125,7 +127,7 @@
                             <td>70</td>
                             <td class="rating">4.6</td>
                             <td class="primary">Details</td>
-                        </tr> -->
+                        </tr>
                     </tbody>
                 </table>
                 <a href="">Show All</a>
@@ -188,47 +190,49 @@
                     </div>
                 </div>
             </div>
-            <div class="no_of_deals">
-                <div class="details">
-                <h2>No of Deals</h2>
-                <p>Enables horizontal layout</p>
-                <p>Vertically aligns content</p>
-                <p>Adds spacing inside the box</p>
+            <div class="right_container">
+                <div class="no_of_deals">
+                    <div class="details">
+                        <h2>No of Deals</h2>
+                        <p>Enables horizontal layout</p>
+                        <p>Vertically aligns content</p>
+                        <p>Adds spacing inside the box</p>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>81</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="progress">
-                    <svg>
-                        <circle cx="38" cy="38" r="36"></circle>
-                    </svg>
-                    <div class="number">
-                        <p>81</p>
+                <div class="todo_section">
+                    <div class="details">
+                        <h2>To-Do List</h2>
+                        <ul>
+                            <li><input type="checkbox" /> Complete UI design</li>
+                            <li><input type="checkbox" /> Review project requirements</li>
+                            <li><input type="checkbox" /> Submit report</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="review_section">
+                    <div class="details">
+                        <h2>Customer Reviews</h2>
+                        <div class="rating">
+                            <span>★★★★☆</span>
+                            <p>4.5/5</p>
+                            <p>"Excellent service and quality!"</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="todo_section">
-                <div class="details">
-                    <h2>To-Do List</h2>
-                    <ul>
-                        <li><input type="checkbox" /> Complete UI design</li>
-                        <li><input type="checkbox" /> Review project requirements</li>
-                        <li><input type="checkbox" /> Submit report</li>
-                    </ul>
-                </div>
-            </div>
             
-            <div class="review_section">
-                <div class="details">
-                    <h2>Customer Reviews</h2>
-                    <div class="rating">
-                        <span>★★★★☆</span>
-                        <p>4.5/5</p>
-                        <p>"Excellent service and quality!"</p>
-                    </div>
-                </div>
             </div>
-            
-        </div>
     </div>
-    <script src="..//js/middle.js"></script>
+    </div>
     <script src="..//js/dashboard.js"></script>
 </body>
 </html>
