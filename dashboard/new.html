@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/new.css">
+</head>
+<body>
+    <button class="menu-toggle">&#9776;</button>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="/assets/logo.jpg" alt="">
+                <h2 >JAMS</h2>
+            </div>
+            <button class="close-toggle">&#10005;</button>
+        </div>
+            <a href="/dashboard/new.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+            <a href="/dashboard/lead.html"><i class="fa-solid fa-phone"></i> Leads</a>
+            <a><i class="fa-solid fa-user"></i> Customer</a>
+            <a><i class="fa-solid fa-sack-dollar"></i> Accounts</a>
+            <a><i class="fa-solid fa-handshake-simple"></i> Deals</a>
+            <a><i class="fa-solid fa-square-poll-vertical"></i> Reports</a>
+            <!-- <a><i class="icon">📢</i> Feeds</a> -->
+            <a><i class="fa-solid fa-right-from-bracket"></i> LogOut</a>
+    </div>
+    <div class="main-content">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <input class="date" type="date">
+            <div class="top">
+                <div class="theme_toggler">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="profile">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="info">
+                        <p>Hey, <b>Allen</b></p>
+                        <b class="text_muted">Admin</b>
+                    </div>
+                    <div class="profile_photo">
+                        <img src="" alt="profile_photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="cards">
+            <div  class="card">
+                <div  class="middle">
+                    <div class="left">
+                        <h3>Customer Count</h3>
+                        <h1>20</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>81%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text_muted">Last 24 Hours</small>
+            </div>
+            <div class="card">
+                <div class="middle">
+                    <div class="left">
+                        <h3>Lead Count</h3>
+                        <h1>20</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>81%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text_muted">Last 24 Hours</small>
+            </div>
+            <div class="card">
+                <div class="middle">
+                    <div class="left">
+                        <h3>Monthly Profit</h3>
+                        <h1>20</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>81%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text_muted">Last 24 Hours</small>
+            </div>
+            <div style="margin-bottom: -3.5rem;margin-top: -3rem;gap: 1rem;" class="card">
+                <h2>No of Deals</h2>
+                <div class="progress">
+                    <svg>
+                        <circle cx="38" cy="38" r="36"></circle>
+                    </svg>
+                    <div class="number">
+                        <p>81</p>
+                    </div>
+                    <div class="des">
+                        <p>Enables horizontal layout</p>
+                        <p>Vertically aligns content</p>
+                        <p>Adds spacing inside the box</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="table-section">
+            <h2>Customers</h2>
+            <table>
+                <tr><th>Name</th><th>Profit</th><th>Score</th><th>Rating</th></tr>
+                <tr><td>name1</td><td>50</td><td>50</td><td class="rating">4.5</td><td><button class="details">Details</button></td></tr>
+                <tr><td>name2</td><td>30</td><td>30</td><td class="rating">3.3</td><td><button class="details">Details</button></td></tr>
+                <tr><td>name3</td><td>70</td><td>70</td><td class="rating">4.6</td><td><button class="details">Details</button></td></tr>
+            </table>
+            <a href="">Show All</a>
+        </section>
+        <section class="lead-section">
+            <h2>Leads</h2>
+            <table>
+                <tr><th>Lead Name</th><th>Lead Score</th><th>Lead Status</th><th>Phone</th></tr>
+                <tr><td>name1</td><td>50</td><td>50</td><td class="rating">7868268645</td><td><button class="details">Details</button></td></tr>
+                <tr><td>name2</td><td>30</td><td>30</td><td class="rating">9818245733</td><td><button class="details">Details</button></td></tr>
+                <tr><td>name3</td><td>70</td><td>70</td><td class="rating">7816891146</td><td><button class="details">Details</button></td></tr>
+            </table>
+            <a href="">Show All</a>
+        </section>
+        <section class="to-do">
+            <h2>To-Do List</h2>
+            <ol>
+                <li><input type="checkbox" /> Complete UI design</li>
+                <li><input type="checkbox" /> Review project requirements</li>
+                <li><input type="checkbox" /> Submit report</li>
+            </ol>
+            <div>
+                <input  type="text" class="addTask" placeholder="Add a task" />
+                <button onclick="todoList()" id="Submit">Add</button>
+            </div>
+        </section>
+        <!-- <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="rating">
+                <span>★★★★☆<p>4.5/5</p></span>
+                <p>"Excellent service and quality!"</p>
+            </div>
+        </section> -->
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="reviewList">
+                </div>
+            <div id="addReview">
+                <h3>Add Your Review</h3>
+                <input type="text" id="reviewText" placeholder="Your review...">
+                <h3>Choose Rating</h3>
+                <select id="reviewRating">
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+                <button id="submitReview">Submit</button>
+            </div>
+        </section>
+    </div>
+    <script src="/js/new.js"></script>
+</body>
+</html>

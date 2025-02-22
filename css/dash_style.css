@@ -60,6 +60,7 @@ body{
     color: var(--color-dark-variant);
 }
 #menu_btn {
+    display: none;
     position: fixed;
     top: 1rem;
     left: 1rem;
@@ -72,6 +73,15 @@ body{
     font-size: 1rem;
     z-index: 4;
 }
+/* #sidebar {
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hide {
+    transform: translateX(-100%);
+} */
+
 .show-menu {
     display: block;
 }
@@ -98,6 +108,10 @@ aside .logo h2{
 aside .logo img{
     width: 3rem;
     height: 3rem;
+}
+#close_btn {
+    cursor: pointer;
+    padding: 10px;
 }
 aside .close i{
     padding-right: 2rem;
@@ -467,7 +481,7 @@ main .insights > div:hover{
         box-shadow: var(--box-shadow);
         height: 100%;
         padding-right: var(--card-padding);
-        /* display: none; */
+        display: none;
         animation: showMenu 400ms ease forwards;
     }
     @keyframes showMenu {
@@ -525,14 +539,14 @@ main .insights > div:hover{
     .right .profile .info{
         display: none;
     }
-    .right .top buttton{
+    .right .top button{
         display: inline-block;
         background: transparent;
         cursor: pointer;
         color: var(--color-dark);
         left: 1rem;
     }
-    .right.top .buttton i{
+    .right.top .button i{
         font-size: 2rem;
     }
     .right .right_container > div{

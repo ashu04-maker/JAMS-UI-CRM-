@@ -1,0 +1,375 @@
+*{
+  text-decoration: none;
+}
+body {
+  display: flex;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background: #111111ea;
+  color: white;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+.logo h2 {
+  margin-bottom: 1rem;
+  color: #00152e;
+}
+.logo img {
+  width: 3rem;
+  height: 3rem;
+}
+.close-toggle {
+  cursor: pointer;
+  color: #00152e;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding-right: 20px;
+}
+.sidebar {
+  width: 13rem;
+  background: #74b6f9;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  transition: transform 0.3s ease;
+}
+.sidebar a {
+  padding: 15px;
+  display: flex;
+  color: #00152e;
+  align-items: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+.sidebar a:last-child {
+  margin-top: 17rem;
+}
+.sidebar a i {
+  margin-right: 10px;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.sidebar a:hover {
+  color: #f1f7f8;
+}
+.sidebar a:hover i {
+  margin-left: 1rem;
+}
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 4px;
+  z-index: 2;
+}
+
+.main-content {
+  margin-left: 18rem;
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+.date {
+  background: #f1f7f8;
+  border-radius: 0.4rem;
+  padding: 0.5rem 1.6rem;
+  margin-bottom: 1.5rem;
+}
+.dashboard-header .top {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 0 0.8rem;
+  height: 4.6rem;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+}
+.top .theme_toggler {
+  display: flex;
+  justify-content: space-between;
+  height: 1.8rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+.top .theme_toggler i {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+}
+.top .theme_toggler i .active {
+  background: #74b6f9;
+  color: #00152e;
+  border-radius: 0.4rem;
+}
+.top .profile {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f1f7f8;
+  color: #00152e;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+  box-shadow: 0 1rem 1rem #a9cdfa32;
+  cursor: pointer;
+  position: relative; 
+}
+
+.progress {
+  position: relative;
+  height: 90px;
+  border-radius: 50%;
+  padding-left: 25px;
+}
+
+.progress svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+.progress circle {
+  fill: none;
+  stroke: #00d4ff;
+  stroke-width: 10;
+  stroke-dasharray: 226;
+  stroke-dashoffset: 45; 
+  transform: translate(5px, 5px);
+}
+
+.progress .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+}
+
+.table-section table,
+.lead-section table {
+  width: 100%;
+  background: #f1f7f8;
+  border-radius: 2rem;
+  padding: 1.8rem;
+  color: #dce1eb;
+  text-align: center;
+  box-shadow: 0 1rem 1rem #a9cdfa32;
+  margin-top: 20px;
+}
+.table-section table:hover,
+.card:hover {
+  box-shadow: none;
+}
+.table-section th,
+.table-section td,
+.lead-section th,
+.lead-section td {
+  text-align: center;
+  height: 2.6rem;
+  border-bottom: 1px solid #111e88;
+  color: #57606b;
+}
+.table-section a,
+.lead-section a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: #dce1eb;
+  font-weight: 700;
+}
+.details {
+  background: #63b6f1;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.close-toggle {
+  display: block;
+}
+.to-do,
+.reviews {
+  background: #f1f7f8;
+  color: #00152e;
+  padding: 15px;
+  border-radius: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 1rem 1rem #a9cdfa32;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.to-do ul,
+.reviews p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px 5px;
+  }
+  .sidebar {
+    transform: translateX(-13rem);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+    z-index: 3;
+  }
+
+  .main-content {
+    margin-left: 2.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 4;
+  }
+}
+body.dark-theme-variables {
+  background: #181a1e;
+  color: #f1f7f8;
+}
+
+body.dark-theme-variables .card {
+  background: #25282e;
+  color: #f1f7f8;
+}
+
+body.dark-theme-variables .table-section table,
+body.dark-theme-variables .lead-section table,
+body.dark-theme-variables .to-do,
+body.dark-theme-variables .reviews {
+  background: #ffffff;
+  color: #f1f7f8;
+}
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.delete-btn:hover {
+  background: #ff6b81;
+}
+
+ol li {
+  padding: 8px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 4px;
+}
+
+ol li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.addTask {
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+#Submit {
+  padding: 8px 15px;
+  background: #63b6f1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#Submit:hover {
+  background: #4fa8e4;
+}
+
+.reviews {
+  background: #f1f7f8;
+  color: #00152e;
+  padding: 15px;
+  border-radius: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 1rem 1rem #a9cdfa32;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.reviews .rating {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.reviews #addReview {
+  margin-top: 20px;
+}
+
+#reviewText, #reviewRating {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#submitReview {
+  background-color: #63b6f1;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#submitReview:hover {
+  background-color: #52a2d9;
+}
